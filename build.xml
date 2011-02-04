@@ -1,0 +1,67 @@
+<project name="4shared-api" default="all" basedir=".">
+  <property name='src' location='src'/>
+  <property name='demo' location='demo'/>
+  <property name='out' location='build'/>
+  <property name='dist' location='dist'/>
+  <property name='lib' location='lib'/>
+  <property name='sh' location='sh'/>
+  
+  <target name='init'>
+    <tstamp/>
+    <mkdir dir="${out}/lib"/>
+    <mkdir dir="${out}/demo"/>
+  </target>
+
+  <target name='compile' depends='init'>
+    <javac srcdir="${src}" destdir="${out}/lib" includeantruntime='false'>
+      <classpath>
+	<fileset dir="${lib}">
+	  <include name="**/*.jar"/>
+	</fileset>
+      </classpath>
+    </javac>
+  </target>
+
+  <target name='dist' depends='compile'>
+    <mkdir dir="${dist}/lib"/>
+    <jar jarfile='${dist}/lib/4shared-api.jar' basedir='${out}/lib'/>
+  </target>
+
+  <target name='compile-demo' depends='dist'>
+    <javac srcdir='${demo}' destdir="${out}/demo" includeantruntime='false'>
+      <classpath>
+	<fileset dir="${lib}">
+	  <include name="**/*.jar"/>
+	</fileset>
+	<fileset dir="${dist}/lib">
+	  <include name="*.jar"/>
+	</fileset>
+      </classpath>
+    </javac>
+  </target>
+  
+  <target name='demo' depends='compile-demo'>
+    <mkdir dir="${dist}/demo"/>
+    <jar jarfile="${dist}/demo/4shared-api-demo.jar" basedir="${out}/demo"/>
+    <copy todir="${dist}/demo">
+      <fileset dir="${sh}">
+	<include name="*"/>
+      </fileset>
+    </copy>
+    <chmod perm="ugo+rx">
+      <fileset dir="${dist}/demo">
+	<exclude name="*.jar"/>
+      </fileset>
+    </chmod>
+  </target>
+
+  <target name='finish'>
+    <delete dir="${out}"/>
+  </target>
+
+  <target name='clean' depends='finish'>
+    <delete dir="${dist}"/>
+  </target>
+
+  <target name='all' depends='dist,demo,finish'/>
+</project>
