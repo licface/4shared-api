@@ -54,6 +54,7 @@ public class BrowseFolderDemo {
   private static void print(AccountItem ai, int level) {
     String res = new String(new char[level*2]).replace('\0',' ')+ai.getName();
     if(ai.isDirectory()) res += "/";
+    else res += " ("+ai.getId()+")";
     System.out.println(res);
   }
 
