@@ -87,7 +87,7 @@ public class UploadDemo {
     }
   }
 
-  private static void showUsage
-      () {
+  private static void showUsage() {
+    System.out.println("Usage: upload login password fileToUpload");
   }
 }
