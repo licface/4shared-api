@@ -1,0 +1,10 @@
+#!/bin/sh
+
+ROOT=../..
+JARS=`ls ../../lib`
+CLASSPATH="4shared-api-demo.jar:../lib/4shared-api.jar"
+for i in $JARS ; do
+    CLASSPATH="${CLASSPATH}:../../lib/${i}"
+done
+java -classpath  $CLASSPATH \
+    com.pmstation.shared.soap.demo.FolderSettingsDemo $*
