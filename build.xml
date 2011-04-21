@@ -42,10 +42,16 @@
   
   <target name='demo' depends='compile-demo'>
     <mkdir dir="${dist}/demo"/>
+    <mkdir dir="${dist}/src"/>
     <jar jarfile="${dist}/demo/4shared-api-demo.jar" basedir="${out}/demo"/>
     <copy todir="${dist}/demo">
       <fileset dir="${sh}">
 	<include name="*"/>
+      </fileset>
+    </copy>
+    <copy todir="${dist}/src">
+      <fileset dir="${demo}">
+	<include name="**/*.java"/>
       </fileset>
     </copy>
     <chmod perm="ugo+rx">
