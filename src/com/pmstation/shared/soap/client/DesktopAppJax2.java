@@ -25,10 +25,35 @@ public interface DesktopAppJax2 {
 
     /**
      * 
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     * @throws ApiException
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public String run(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        String arg2,
+        @WebParam(name = "arg3", partName = "arg3")
+        String arg3)
+        throws ApiException
+    ;
+
+    /**
+     * 
      * @param arg1
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -36,7 +61,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -44,6 +71,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItem
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -51,7 +79,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -84,6 +114,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItemArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -93,13 +124,16 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
      * @param arg2
      * @param arg1
      * @param arg0
+     * @throws ApiException
      */
     @WebMethod
     public void uploadCancelFile(
@@ -108,7 +142,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -117,6 +153,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItemArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -126,7 +163,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        LongArray arg2);
+        LongArray arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -134,6 +173,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -141,7 +181,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -150,6 +192,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.DirHistoryDTOArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -159,7 +202,51 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     * @throws ApiException
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public String getPlaylistLink(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        long arg2)
+        throws ApiException
+    ;
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns com.pmstation.shared.soap.client.UserSettings
+     * @throws ApiException
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public UserSettings getSettings(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        int arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -187,11 +274,27 @@ public interface DesktopAppJax2 {
 
     /**
      * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public String getToolVersion(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1);
+
+    /**
+     * 
      * @param arg2
      * @param arg1
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.StringArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -201,7 +304,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -210,6 +315,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -219,7 +325,36 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
+
+    /**
+     * 
+     * @param arg4
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns com.pmstation.shared.soap.client.FileUploadInfo
+     * @throws ApiException
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public FileUploadInfo simpleUploadStart(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        long arg2,
+        @WebParam(name = "arg3", partName = "arg3")
+        String arg3,
+        @WebParam(name = "arg4", partName = "arg4")
+        long arg4)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -233,6 +368,7 @@ public interface DesktopAppJax2 {
      * @param arg7
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -252,7 +388,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg6", partName = "arg6")
         boolean arg6,
         @WebParam(name = "arg7", partName = "arg7")
-        boolean arg7);
+        boolean arg7)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -264,6 +402,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -279,7 +418,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg4", partName = "arg4")
         boolean arg4,
         @WebParam(name = "arg5", partName = "arg5")
-        boolean arg5);
+        boolean arg5)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -295,6 +436,7 @@ public interface DesktopAppJax2 {
      * @param arg9
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -318,7 +460,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg8", partName = "arg8")
         String arg8,
         @WebParam(name = "arg9", partName = "arg9")
-        String arg9);
+        String arg9)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -327,6 +471,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.StringArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -336,7 +481,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        UserSettings arg2);
+        UserSettings arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -345,6 +492,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.StringArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -354,7 +502,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        UserSettings arg2);
+        UserSettings arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -365,6 +515,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns int
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -378,7 +529,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg3", partName = "arg3")
         String arg3,
         @WebParam(name = "arg4", partName = "arg4")
-        String arg4);
+        String arg4)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -388,6 +541,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -399,7 +553,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         long arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        String arg3);
+        String arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -409,6 +565,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -420,7 +577,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         long arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        String arg3);
+        String arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -429,6 +588,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -438,7 +598,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -448,6 +610,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns boolean
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -459,7 +622,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         long arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        String arg3);
+        String arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -468,6 +633,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -477,7 +643,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        String arg2);
+        String arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -486,6 +654,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -495,13 +664,16 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        String arg2);
+        String arg2)
+        throws ApiException
+    ;
 
     /**
      * 
      * @param arg2
      * @param arg1
      * @param arg0
+     * @throws ApiException
      */
     @WebMethod
     public void deleteFile(
@@ -510,13 +682,16 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
      * @param arg2
      * @param arg1
      * @param arg0
+     * @throws ApiException
      */
     @WebMethod
     public void deleteFileFinal(
@@ -525,13 +700,16 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
      * @param arg2
      * @param arg1
      * @param arg0
+     * @throws ApiException
      */
     @WebMethod
     public void deleteFolder(
@@ -540,13 +718,16 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
      * @param arg2
      * @param arg1
      * @param arg0
+     * @throws ApiException
      */
     @WebMethod
     public void deleteFolderFinal(
@@ -555,13 +736,16 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
      * @param arg2
      * @param arg1
      * @param arg0
+     * @throws ApiException
      */
     @WebMethod
     public void downloadFinished(
@@ -570,7 +754,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -578,6 +764,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItemArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -585,7 +772,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -593,6 +782,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItemArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -600,7 +790,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -618,6 +810,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -627,7 +820,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        String arg2);
+        String arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -636,6 +831,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItem
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -645,7 +841,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -654,6 +852,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -663,7 +862,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -672,6 +873,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItem
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -681,7 +883,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -690,6 +894,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.SharedFolderPropertiesArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -699,7 +904,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -709,6 +916,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.DirHistoryDTOArrayArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -720,7 +928,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         LongArray arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        LongArray arg3);
+        LongArray arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -730,6 +940,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.DirHistoryDTOArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -741,7 +952,30 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         long arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        long arg3);
+        long arg3)
+        throws ApiException
+    ;
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns long
+     * @throws ApiException
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public long getHistoryLastId(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -751,6 +985,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItem
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -762,7 +997,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         long arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        boolean arg3);
+        boolean arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -771,6 +1008,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -780,7 +1018,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -791,6 +1031,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItemArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -804,7 +1045,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg3", partName = "arg3")
         int arg3,
         @WebParam(name = "arg4", partName = "arg4")
-        int arg4);
+        int arg4)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -812,6 +1055,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -819,7 +1063,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -827,6 +1073,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -834,7 +1081,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -853,6 +1102,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.DirHistoryDTOArrayArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -864,7 +1114,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         LongArray arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        LongArray arg3);
+        LongArray arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -890,6 +1142,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItemArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -897,7 +1150,27 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
+
+    /**
+     * 
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns com.pmstation.shared.soap.client.AccountItemArray
+     * @throws ApiException
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public AccountItemArray getDirLinkItems(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -908,6 +1181,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItemArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -921,7 +1195,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg3", partName = "arg3")
         String arg3,
         @WebParam(name = "arg4", partName = "arg4")
-        String arg4);
+        String arg4)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -944,6 +1220,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns boolean
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -951,7 +1228,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -959,6 +1238,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns boolean
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -966,7 +1246,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -974,6 +1256,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns boolean
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -981,7 +1264,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -989,6 +1274,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns boolean
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -996,13 +1282,16 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
      * @param arg2
      * @param arg1
      * @param arg0
+     * @throws ApiException
      */
     @WebMethod
     public void markSynchronized(
@@ -1011,7 +1300,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1023,6 +1314,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1038,7 +1330,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg4", partName = "arg4")
         LongArray arg4,
         @WebParam(name = "arg5", partName = "arg5")
-        LongArray arg5);
+        LongArray arg5)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1048,6 +1342,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1059,7 +1354,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         long arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        String arg3);
+        String arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1069,6 +1366,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1080,13 +1378,16 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         long arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        String arg3);
+        String arg3)
+        throws ApiException
+    ;
 
     /**
      * 
      * @param arg2
      * @param arg1
      * @param arg0
+     * @throws ApiException
      */
     @WebMethod
     public void restoreFile(
@@ -1095,13 +1396,16 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
      * @param arg2
      * @param arg1
      * @param arg0
+     * @throws ApiException
      */
     @WebMethod
     public void restoreFiles(
@@ -1110,7 +1414,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        LongArray arg2);
+        LongArray arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1120,6 +1426,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1131,7 +1438,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         long arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        SharedFolderProperties arg3);
+        SharedFolderProperties arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1153,6 +1462,7 @@ public interface DesktopAppJax2 {
      * @param arg2
      * @param arg1
      * @param arg0
+     * @throws ApiException
      */
     @WebMethod
     public void syncFinished(
@@ -1161,7 +1471,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1171,6 +1483,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns boolean
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1182,7 +1495,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         String arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        String arg3);
+        String arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1192,6 +1507,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1203,7 +1519,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         long arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        String arg3);
+        String arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1212,6 +1530,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns boolean
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1221,7 +1540,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1232,6 +1553,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1245,7 +1567,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg3", partName = "arg3")
         String arg3,
         @WebParam(name = "arg4", partName = "arg4")
-        long arg4);
+        long arg4)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1256,6 +1580,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1269,7 +1594,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg3", partName = "arg3")
         String arg3,
         @WebParam(name = "arg4", partName = "arg4")
-        long arg4);
+        long arg4)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1295,6 +1622,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.UserSettingsArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1302,25 +1630,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
-
-    /**
-     * 
-     * @param arg2
-     * @param arg1
-     * @param arg0
-     * @return
-     *     returns com.pmstation.shared.soap.client.UserSettings
-     */
-    @WebMethod
-    @WebResult(partName = "return")
-    public UserSettings getSettings(
-        @WebParam(name = "arg0", partName = "arg0")
-        String arg0,
-        @WebParam(name = "arg1", partName = "arg1")
-        String arg1,
-        @WebParam(name = "arg2", partName = "arg2")
-        int arg2);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1328,6 +1640,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.SettingsGroupArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1335,7 +1648,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1345,6 +1660,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1356,7 +1672,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg2", partName = "arg2")
         long arg2,
         @WebParam(name = "arg3", partName = "arg3")
-        String arg3);
+        String arg3)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1364,6 +1682,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.AccountItemArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1371,7 +1690,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1380,6 +1701,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1389,7 +1711,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1398,6 +1722,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns long
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1407,7 +1732,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1415,6 +1742,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns int
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1422,7 +1750,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg0", partName = "arg0")
         String arg0,
         @WebParam(name = "arg1", partName = "arg1")
-        String arg1);
+        String arg1)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1431,6 +1761,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.Mp3Info
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1440,7 +1771,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        String arg2);
+        String arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1449,6 +1782,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.Mp3InfoArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1458,7 +1792,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1467,6 +1803,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.ExifInfoArray
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1476,7 +1813,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1485,6 +1824,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns com.pmstation.shared.soap.client.ExifInfo
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1494,7 +1834,9 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        String arg2);
+        String arg2)
+        throws ApiException
+    ;
 
     /**
      * 
@@ -1503,6 +1845,7 @@ public interface DesktopAppJax2 {
      * @param arg0
      * @return
      *     returns java.lang.String
+     * @throws ApiException
      */
     @WebMethod
     @WebResult(partName = "return")
@@ -1512,6 +1855,104 @@ public interface DesktopAppJax2 {
         @WebParam(name = "arg1", partName = "arg1")
         String arg1,
         @WebParam(name = "arg2", partName = "arg2")
-        long arg2);
+        long arg2)
+        throws ApiException
+    ;
+
+    /**
+     * 
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     * @throws ApiException
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public String getVideoPreviewLink(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        long arg2)
+        throws ApiException
+    ;
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     * @throws ApiException
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public String getSmallImageLink(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        long arg2,
+        @WebParam(name = "arg3", partName = "arg3")
+        int arg3)
+        throws ApiException
+    ;
+
+    /**
+     * 
+     * @param arg4
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     * @throws ApiException
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public String getSharedPlaylistLink(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        long arg2,
+        @WebParam(name = "arg3", partName = "arg3")
+        String arg3,
+        @WebParam(name = "arg4", partName = "arg4")
+        String arg4)
+        throws ApiException
+    ;
+
+    /**
+     * 
+     * @param arg3
+     * @param arg2
+     * @param arg1
+     * @param arg0
+     * @return
+     *     returns java.lang.String
+     * @throws ApiException
+     */
+    @WebMethod
+    @WebResult(partName = "return")
+    public String getFileVersionLink(
+        @WebParam(name = "arg0", partName = "arg0")
+        String arg0,
+        @WebParam(name = "arg1", partName = "arg1")
+        String arg1,
+        @WebParam(name = "arg2", partName = "arg2")
+        long arg2,
+        @WebParam(name = "arg3", partName = "arg3")
+        int arg3)
+        throws ApiException
+    ;
 
 }

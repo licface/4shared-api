@@ -1,9 +1,6 @@
 package com.pmstation.shared.soap.demo;
 
-import com.pmstation.shared.soap.client.DesktopAppJax2;
-import com.pmstation.shared.soap.client.DesktopAppJax2Service;
-import com.pmstation.shared.soap.client.SharedFolderProperties;
-import com.pmstation.shared.soap.client.SharedFolderPropertiesArray;
+import com.pmstation.shared.soap.client.*;
 
 import java.lang.reflect.Method;
 
@@ -14,7 +11,7 @@ import java.lang.reflect.Method;
  * Time: 4:24 PM
  */
 public class FolderSettingsDemo {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws ApiException {
     switch (args.length) {
       case 3:
         getSettings(args[0], args[1], Long.parseLong(args[2]));
@@ -31,7 +28,7 @@ public class FolderSettingsDemo {
     System.out.println("Usage: folderSettings login password dirId [<setting to set> <new value>]");
   }
 
-  private static void setSetting(String login, String password, long dirId, String settingName, String newValue) {
+  private static void setSetting(String login, String password, long dirId, String settingName, String newValue) throws ApiException {
     DesktopAppJax2 da = new DesktopAppJax2Service().getDesktopAppJax2Port();
     SharedFolderPropertiesArray res = da.getFolderSharingProperties(login, password, dirId);
     SharedFolderProperties props = res.getItem().get(0);
@@ -54,7 +51,7 @@ public class FolderSettingsDemo {
     }
   }
 
-  private static void getSettings(String login, String password, long dirId) {
+  private static void getSettings(String login, String password, long dirId) throws ApiException {
     DesktopAppJax2 da = new DesktopAppJax2Service().getDesktopAppJax2Port();
     SharedFolderPropertiesArray res = da.getFolderSharingProperties(login, password, dirId);
     SharedFolderProperties props = res.getItem().get(0);

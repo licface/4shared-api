@@ -17,6 +17,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="compId" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="date" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
  *         &lt;element name="dirId" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
  *         &lt;element name="fileId" type="{http://www.w3.org/2001/XMLSchema}long" minOccurs="0"/>
@@ -35,6 +36,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "dirHistoryDTO", propOrder = {
+    "compId",
     "date",
     "dirId",
     "fileId",
@@ -46,6 +48,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class DirHistoryDTO {
 
+    protected String compId;
     protected XMLGregorianCalendar date;
     protected Long dirId;
     protected Long fileId;
@@ -54,6 +57,30 @@ public class DirHistoryDTO {
     protected long parentDirId;
     protected Long sourceDirId;
     protected Long sourceFileId;
+
+    /**
+     * Gets the value of the compId property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCompId() {
+        return compId;
+    }
+
+    /**
+     * Sets the value of the compId property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCompId(String value) {
+        this.compId = value;
+    }
 
     /**
      * Gets the value of the date property.

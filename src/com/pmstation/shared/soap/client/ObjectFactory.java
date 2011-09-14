@@ -1,7 +1,10 @@
 
 package com.pmstation.shared.soap.client;
 
+import javax.xml.bind.JAXBElement;
+import javax.xml.bind.annotation.XmlElementDecl;
 import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.namespace.QName;
 
 
 /**
@@ -21,52 +24,13 @@ import javax.xml.bind.annotation.XmlRegistry;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _ApiException_QNAME = new QName("http://api.soap.shared.pmstation.com/", "ApiException");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.pmstation.shared.soap.client
      * 
      */
     public ObjectFactory() {
-    }
-
-    /**
-     * Create an instance of {@link ExifInfo }
-     * 
-     */
-    public ExifInfo createExifInfo() {
-        return new ExifInfo();
-    }
-
-    /**
-     * Create an instance of {@link Mp3Info }
-     * 
-     */
-    public Mp3Info createMp3Info() {
-        return new Mp3Info();
-    }
-
-    /**
-     * Create an instance of {@link LongArray }
-     * 
-     */
-    public LongArray createLongArray() {
-        return new LongArray();
-    }
-
-    /**
-     * Create an instance of {@link SettingsGroup }
-     * 
-     */
-    public SettingsGroup createSettingsGroup() {
-        return new SettingsGroup();
-    }
-
-    /**
-     * Create an instance of {@link ExifInfoArray }
-     * 
-     */
-    public ExifInfoArray createExifInfoArray() {
-        return new ExifInfoArray();
     }
 
     /**
@@ -78,51 +42,35 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AccountItemArray }
+     * Create an instance of {@link FileUploadInfo }
      * 
      */
-    public AccountItemArray createAccountItemArray() {
-        return new AccountItemArray();
+    public FileUploadInfo createFileUploadInfo() {
+        return new FileUploadInfo();
     }
 
     /**
-     * Create an instance of {@link UserSettingsArray }
+     * Create an instance of {@link UserSettings }
      * 
      */
-    public UserSettingsArray createUserSettingsArray() {
-        return new UserSettingsArray();
+    public UserSettings createUserSettings() {
+        return new UserSettings();
     }
 
     /**
-     * Create an instance of {@link SettingsGroupArray }
+     * Create an instance of {@link FaultBean }
      * 
      */
-    public SettingsGroupArray createSettingsGroupArray() {
-        return new SettingsGroupArray();
+    public FaultBean createFaultBean() {
+        return new FaultBean();
     }
 
     /**
-     * Create an instance of {@link Mp3InfoArray }
+     * Create an instance of {@link ExifInfo }
      * 
      */
-    public Mp3InfoArray createMp3InfoArray() {
-        return new Mp3InfoArray();
-    }
-
-    /**
-     * Create an instance of {@link DirHistoryDTOArrayArray }
-     * 
-     */
-    public DirHistoryDTOArrayArray createDirHistoryDTOArrayArray() {
-        return new DirHistoryDTOArrayArray();
-    }
-
-    /**
-     * Create an instance of {@link SharedFolderProperties }
-     * 
-     */
-    public SharedFolderProperties createSharedFolderProperties() {
-        return new SharedFolderProperties();
+    public ExifInfo createExifInfo() {
+        return new ExifInfo();
     }
 
     /**
@@ -134,19 +82,35 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DirHistoryDTOArrayArray }
+     * 
+     */
+    public DirHistoryDTOArrayArray createDirHistoryDTOArrayArray() {
+        return new DirHistoryDTOArrayArray();
+    }
+
+    /**
+     * Create an instance of {@link ExifInfoArray }
+     * 
+     */
+    public ExifInfoArray createExifInfoArray() {
+        return new ExifInfoArray();
+    }
+
+    /**
+     * Create an instance of {@link AccountItemArray }
+     * 
+     */
+    public AccountItemArray createAccountItemArray() {
+        return new AccountItemArray();
+    }
+
+    /**
      * Create an instance of {@link AccountItem }
      * 
      */
     public AccountItem createAccountItem() {
         return new AccountItem();
-    }
-
-    /**
-     * Create an instance of {@link DirHistoryDTO }
-     * 
-     */
-    public DirHistoryDTO createDirHistoryDTO() {
-        return new DirHistoryDTO();
     }
 
     /**
@@ -158,6 +122,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Mp3Info }
+     * 
+     */
+    public Mp3Info createMp3Info() {
+        return new Mp3Info();
+    }
+
+    /**
      * Create an instance of {@link SharedFolderPropertiesArray }
      * 
      */
@@ -166,11 +138,68 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link UserSettings }
+     * Create an instance of {@link DirHistoryDTO }
      * 
      */
-    public UserSettings createUserSettings() {
-        return new UserSettings();
+    public DirHistoryDTO createDirHistoryDTO() {
+        return new DirHistoryDTO();
+    }
+
+    /**
+     * Create an instance of {@link SettingsGroup }
+     * 
+     */
+    public SettingsGroup createSettingsGroup() {
+        return new SettingsGroup();
+    }
+
+    /**
+     * Create an instance of {@link Mp3InfoArray }
+     * 
+     */
+    public Mp3InfoArray createMp3InfoArray() {
+        return new Mp3InfoArray();
+    }
+
+    /**
+     * Create an instance of {@link SharedFolderProperties }
+     * 
+     */
+    public SharedFolderProperties createSharedFolderProperties() {
+        return new SharedFolderProperties();
+    }
+
+    /**
+     * Create an instance of {@link LongArray }
+     * 
+     */
+    public LongArray createLongArray() {
+        return new LongArray();
+    }
+
+    /**
+     * Create an instance of {@link SettingsGroupArray }
+     * 
+     */
+    public SettingsGroupArray createSettingsGroupArray() {
+        return new SettingsGroupArray();
+    }
+
+    /**
+     * Create an instance of {@link UserSettingsArray }
+     * 
+     */
+    public UserSettingsArray createUserSettingsArray() {
+        return new UserSettingsArray();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FaultBean }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://api.soap.shared.pmstation.com/", name = "ApiException")
+    public JAXBElement<FaultBean> createApiException(FaultBean value) {
+        return new JAXBElement<FaultBean>(_ApiException_QNAME, FaultBean.class, null, value);
     }
 
 }

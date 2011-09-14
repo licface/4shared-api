@@ -1,9 +1,6 @@
 package com.pmstation.shared.soap.demo;
 
-import com.pmstation.shared.soap.client.AccountItem;
-import com.pmstation.shared.soap.client.AccountItemArray;
-import com.pmstation.shared.soap.client.DesktopAppJax2;
-import com.pmstation.shared.soap.client.DesktopAppJax2Service;
+import com.pmstation.shared.soap.client.*;
 
 /**
  * Created by IntelliJ IDEA.
@@ -40,7 +37,7 @@ public class BrowseFolderDemo {
     }
   }
 
-  private static void browseFolder(DesktopAppJax2 da, String login, String password, AccountItem dir, int level) {
+  private static void browseFolder(DesktopAppJax2 da, String login, String password, AccountItem dir, int level) throws ApiException {
     if(level > MAX_DEPTH) return;
 
     AccountItemArray cont = da.getItems(login, password, dir.getId());

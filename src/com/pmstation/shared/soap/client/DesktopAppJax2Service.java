@@ -16,7 +16,7 @@ import javax.xml.ws.WebServiceFeature;
  * Generated source version: 2.1
  * 
  */
-@WebServiceClient(name = "DesktopAppJax2Service", targetNamespace = "http://api.soap.shared.pmstation.com/", wsdlLocation = "http://api.4shared.com/jax2/DesktopApp?wsdl")
+@WebServiceClient(name = "DesktopAppJax2Service", targetNamespace = "http://api.soap.shared.pmstation.com/", wsdlLocation = "file:///home/tinedel/projects/4shared-api/src/com/pmstation/shared/soap/client/DesktopApp.wsdl")
 public class DesktopAppJax2Service
     extends Service
 {
@@ -26,7 +26,7 @@ public class DesktopAppJax2Service
     static {
         URL url = null;
         try {
-            url = new URL("http://api.4shared.com/jax2/DesktopApp?wsdl");
+            url = new URL("file:/home/tinedel/projects/4shared-api/src/com/pmstation/shared/soap/client/DesktopApp.wsdl");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

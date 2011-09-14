@@ -1,6 +1,7 @@
 package com.pmstation.shared.soap.demo;
 
 import com.pmstation.shared.soap.client.AccountItem;
+import com.pmstation.shared.soap.client.ApiException;
 import com.pmstation.shared.soap.client.DesktopAppJax2;
 import com.pmstation.shared.soap.client.DesktopAppJax2Service;
 
@@ -17,7 +18,7 @@ import java.net.URI;
  * Time: 3:56 PM
  */
 public class DownloadDemo {
-  private static void download(String login, String password, long fileId, String path) {
+  private static void download(String login, String password, long fileId, String path) throws ApiException {
     DesktopAppJax2 da = new DesktopAppJax2Service().getDesktopAppJax2Port();
     String loginRes = da.login(login, password);
     if (!loginRes.isEmpty()) {

@@ -21,6 +21,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="directory" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="downloadCount" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="downloadLink" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="empty" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}long"/>
  *         &lt;element name="md5" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
@@ -28,6 +29,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="removed" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="shared" type="{http://www.w3.org/2001/XMLSchema}boolean"/>
  *         &lt;element name="size" type="{http://www.w3.org/2001/XMLSchema}long"/>
+ *         &lt;element name="version" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -42,13 +44,15 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "directory",
     "downloadCount",
     "downloadLink",
+    "empty",
     "id",
     "md5",
     "name",
     "parentId",
     "removed",
     "shared",
-    "size"
+    "size",
+    "version"
 })
 public class AccountItem {
 
@@ -56,6 +60,7 @@ public class AccountItem {
     protected boolean directory;
     protected int downloadCount;
     protected String downloadLink;
+    protected boolean empty;
     protected long id;
     protected String md5;
     protected String name;
@@ -63,6 +68,7 @@ public class AccountItem {
     protected boolean removed;
     protected boolean shared;
     protected long size;
+    protected int version;
 
     /**
      * Gets the value of the date property.
@@ -142,6 +148,22 @@ public class AccountItem {
      */
     public void setDownloadLink(String value) {
         this.downloadLink = value;
+    }
+
+    /**
+     * Gets the value of the empty property.
+     * 
+     */
+    public boolean isEmpty() {
+        return empty;
+    }
+
+    /**
+     * Sets the value of the empty property.
+     * 
+     */
+    public void setEmpty(boolean value) {
+        this.empty = value;
     }
 
     /**
@@ -270,6 +292,22 @@ public class AccountItem {
      */
     public void setSize(long value) {
         this.size = value;
+    }
+
+    /**
+     * Gets the value of the version property.
+     * 
+     */
+    public int getVersion() {
+        return version;
+    }
+
+    /**
+     * Sets the value of the version property.
+     * 
+     */
+    public void setVersion(int value) {
+        this.version = value;
     }
 
 }

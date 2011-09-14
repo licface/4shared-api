@@ -1,5 +1,6 @@
 package com.pmstation.shared.soap.demo;
 
+import com.pmstation.shared.soap.client.ApiException;
 import com.pmstation.shared.soap.client.DesktopAppJax2;
 import com.pmstation.shared.soap.client.DesktopAppJax2Service;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -23,7 +24,7 @@ import java.io.FileInputStream;
  * Time: 10:49 AM
  */
 public class UploadDemo {
-  private static void upload(String login, String password, String file) {
+  private static void upload(String login, String password, String file) throws ApiException {
     File f = new File(file);
     if (!f.exists() || !f.canRead() || f.isDirectory()) {
       System.out.println("File does not exist, unreadable or not a file");
