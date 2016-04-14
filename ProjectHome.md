@@ -1,0 +1,1 @@
+Project is created mainly for publishing 4shared soap api. If you would like to participate in development concrete languages bindings do not hesitate to contact us.
